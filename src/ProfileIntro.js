@@ -56,12 +56,6 @@ const ProfileIntro = () => {
                   <span className={classes.titleSet}>E-mail: </span>
                   <span className="color_1">bow1130bow@gmail.com</span>
                 </div>
-                <div>
-                  <span className={classes.titleSet}>CURRENT:</span>
-                  <span className="color_1">
-                    Front-End Engineer at Lion Travel, Inc.
-                  </span>
-                </div>
               </div>
             </Grid>
           </div>
