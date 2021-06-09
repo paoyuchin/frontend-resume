@@ -1,228 +1,169 @@
 import React from "react";
 import "./App.scss";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import LionIcon from "./LionIcon";
-import GogoroIcon from "./GogoroIcon";
-import GermanyIcon from "./GermanyIcon";
-import NCHUicon from "./NCHUicon";
-import HotelIcon from "./HotelIcon";
-import III_icon from "./III_icon";
 import { makeStyles } from "@material-ui/core/styles";
-import { GoMortarBoard } from "react-icons/go";
-import { MdWork } from "react-icons/md";
+// import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+import { FaReact } from 'react-icons/fa';
+import { FaLaptopCode } from 'react-icons/fa';
+import { IoIosGitBranch } from "react-icons/io";
+import { MdWeb, MdBuild, MdTranslate } from "react-icons/md";
+
 
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    "@media (max-width:960px)": {
+      paddingLeft: "15px",
+      paddingTop: "15px"
+    },
+    textAlign: "left",
+    padding: "16px"
+  },
   title: {
-    color: "#3d4451 !important",
-    marginTop: "0px !important",
-  },
-  gogoroName: {
-    color: "#3d4451;",
-    padding: "0px 0px 0px 0px",
-    fontWeight: "bold",
-    fontSize: "18px",
-    marginTop: "-25px !important",
-  },
-  name: {
-    color: "#3d4451;",
-    padding: "16px 0px 0px 0px",
-    fontWeight: "bold",
-    fontSize: "18px",
-  },
-  iconstyle: {
-    color: "white",
-    fontSize: "31px",
-    position: "relative",
-    top: "13px",
-    ["@media (max-width: 960px)"]: {
-      top: "7px !important",
-      color: "white !important",
-      position: "relative !important",
-      fontSize: "24px !important"
+    // padding: "10px 0",
+    textAlign: "left",
+    color: "#3d4451",
+    paddingTop: '15px',
+    "@media (max-width:960px)": {
+      textAlign: "left",
+      // paddingLeft: "16px",
+      padding: "0"
     }
   },
-  skillList: {
+  ullistStyle: {
+    color: "#3d4451",
+    fontSize: "16px",
     padding: "0px",
-    marginTop: "0px",
+    margin: "auto",
+    // maxWidth: "200px",
+    lineHeight: "1.5",
+    "@media (max-width:960px)": {
+      // marginLeft: "16px",
+      paddingLeft: "0",
+      maxWidth: "none"
+    }
   },
-  ul: {
-    padding: "0px !important",
+  iconStyle: {
+    width:'35px',
+    height:'35px',
+    color:'rgb(0, 115, 176);'
   },
+  item: {
+    "@media (max-width:960px)": {
+      textAlign: "left",
+      marginBottom: "19px"
+    }
+  },
+  skills: {
+    color: "#0073B0",
+    padding: "16px 0px",
+    minHeight: "36px"
+  },
+  skillsContent: {
+    color: "#3d4451",
+    padding: "18px 10px 15px 0px",
+    lineHeight: "18px",
+    width: "90%"
+  }
 }));
 
-const Timeline = () => {
+const TechStack = () => {
   const classes = useStyles();
   return (
-    <div className="Timeline">
-      <h1 className="color_2 color_3 title_space">
-        Work experience & Education
-      </h1>
-      <VerticalTimeline>
-      <VerticalTimelineElement
-      className="lion_work"
-      // date="2018/6～2019/8"
-      iconStyle={{ background: "#0073b0" }}
-      icon={
-          <MdWork color="white"/>
-      }
-    >
-      <div className={classes.title}>
-        <h3 className="vertical-timeline-element-title">
-          <GogoroIcon />
-        </h3>
-        <h4
-          className={`vertical-timeline-element-subtitle ${classes.gogoroName}`}
-        >
-          Front end engineer
-        </h4>
-        <p>2019/9~2021/3</p>
-        <p className={classes.title}>
-          <ul className={classes.ul}>
-            <li>Develop Gostation Management System Platform</li>
-            <li>Maintain Gogoro Network Battery Swapping Platform</li>
-            <li>Define and apply interfaces with backend engineers</li>
-            <li>Inter-department collaboration</li>
-            <li>Take part in the project design discussions</li>
-            <li>Responsive Web Design</li>
-            <li>React module development</li>
-          </ul>
-        </p>
+    <div className="techStack_wrap">
+      <h1 className="color_2 color_3 title_space">Tech Stack</h1>
+      <div className={`TechStack fixed_size ${classes.root}`}>
+        <Grid container spacing={3}>
+          <Grid xs={12} sm={12} md={4} className={classes.item}>
+            <FaReact className={classes.iconStyle} />
+            <div className={classes.title}>Front-end</div>
+            <hr />
+            <ul className={classes.ullistStyle}>
+              <li>React.js</li>
+              <li>React-router</li>
+              <li>React-redux</li>
+              <li>React-thunk</li>
+              <li>HTML5</li>
+              <li>css3</li>
+              <li>EJS</li>
+              <li>Sass/Scss</li>
+              <li>ES6</li>
+              <li>Ajax</li>
+            </ul>
+          </Grid>
+          <Grid xs={12} sm={12} md={4} className={classes.item}>
+            <IoIosGitBranch className={classes.iconStyle} />
+            <div className={classes.title}>Dev Tools</div>
+            <hr />
+            <ul className={classes.ullistStyle}>
+              <li>git</li>
+              <li>Gitlab</li>
+              <li>git flow</li>
+              <li>storybook</li>
+              <li>npm/yarn</li>
+              <li>Babel</li>
+              <li>Webpack</li>
+              <li>Sketch</li>
+            </ul>
+            <div />
+          </Grid>
+          <Grid xs={12} sm={12} md={4} className={classes.item}>
+            <FaLaptopCode className={classes.iconStyle} />
+            <div className={classes.title}>Back-end</div>
+            <hr />
+            <ul className={classes.ullistStyle}>
+              <li>Firestore</li>
+              <li>Firebase</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Google Authentication</li>
+              <li>Lambda</li>
+            </ul>
+          </Grid>
+          <Grid xs={12} sm={12} md={4} className={classes.item}>
+            <MdWeb className={classes.iconStyle} />
+            <div className={classes.title}>Project Management/Marketing</div>
+            <hr />
+            <ul className={classes.ullistStyle}>
+              <li>Scrum</li>
+              <li>Google Ads</li>
+              <li>Facebook Ads</li>
+              <li>Trello</li>
+              <li>Jira</li>
+              <li>ClickUp</li>
+              <li>Project management</li>
+              <li>Social Media Strategy</li>
+            </ul>
+          </Grid>
+          <Grid xs={12} sm={12} md={4} className={classes.item}>
+            <MdBuild className={classes.iconStyle} />
+            <div className={classes.title}>UI Test Tools</div>
+            <hr />
+            <ul className={classes.ullistStyle}>
+              <li>MockFlow</li>
+              <li>UML</li>
+              <li>Figma</li>
+              <li>Sketch</li>
+              <li>Illustrator</li>
+              <li>AdobeXD</li>
+              <li>Photoshop</li>
+            </ul>
+            <div />
+          </Grid>
+          <Grid xs={12} sm={12} md={4} className={classes.item}>
+            <MdTranslate className={classes.iconStyle} />
+            <div className={classes.title}>Language</div>
+            <hr />
+            <ul className={classes.ullistStyle}>
+              <li>German</li>
+              <li>English</li>
+              <li>Chinese</li>
+            </ul>
+          </Grid>
+        </Grid>
       </div>
-    </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="lion_work"
-          // date="2018/6～2019/8"
-          iconStyle={{ background: "#0073b0" }}
-          icon={
-              <MdWork color="white"/>
-          }
-        >
-          <div className={classes.title}>
-            <h3 className="vertical-timeline-element-title">
-              <LionIcon />
-            </h3>
-            <h4
-              className={`vertical-timeline-element-subtitle ${classes.name}`}
-            >
-              Front end engineer
-            </h4>
-            <p>2018/6~2019/9</p>
-            <p className={classes.title}>
-              <ul>
-                <li>The Ticket/Pass Page of Lion Travel Website</li>
-                <li>React module development</li>
-                <li>jQuery module development</li>
-                <li>Define and apply interfaces with backend engineers</li>
-                <li>Inter-department collaboration</li>
-                <li>Take part in the project design discussions</li>
-                <li>Search engine optimization</li>
-                <li>Responsive Web Design</li>
-                <li>Cross-browser compatibility</li>
-              </ul>
-            </p>
-          </div>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--iii"
-          iconStyle={{ background: "#e1e0d8" }}
-          icon={
-            <GoMortarBoard />
-          }
-        >
-          <div className={classes.title}>
-            <h3
-              className={`vertical-timeline-element-subtitle ${classes.name}`}
-            >
-              <III_icon />
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle" />
-            <p className={classes.title}>
-              <ul className={classes.skillList}>
-                <li>Javascript</li>
-                <li>HTML5</li>
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>Responsive web design</li>
-              </ul>
-            </p>
-          </div>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--Germany"
-          // date="2016/7～201//8"
-          iconStyle={{ background: "#e1e0d8" }}
-          icon={
-            <GoMortarBoard />
-          }
-        >
-          <div className={classes.title}>
-            <h3 className="vertical-timeline-element-title">
-              <GermanyIcon />
-            </h3>
-            <p>
-            2016/7~2017/7 Exchange Student
-            </p>
-            <p className={classes.title}>
-              <ul>
-                <li>Goethe Zertifikat A2</li>
-                <li>Goethe Zertifikat B1</li>
-              </ul>
-            </p>
-          </div>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--nchu"
-          // date="2012/09～ 2016/06"
-          iconStyle={{ background: "#e1e0d8" }}
-          icon={
-            <GoMortarBoard />
-          }
-        >
-          <div className={classes.title}>
-            <h3 className="vertical-timeline-element-title">
-              <NCHUicon />
-            </h3>
-            <h4>
-              Department of Foreign Languages and Literatures
-            </h4>
-            <p className={classes.title}>
-              <ul>
-              </ul>
-            </p>
-          </div>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--hote"
-          // date="2016/07～2017/08"
-          iconStyle={{ background: "#0073b0" }}
-          icon={
-            <MdWork color="white"/>
-          }
-        >
-          <div className={classes.title}>
-            <h3 className="vertical-timeline-element-title">
-              <HotelIcon />
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              <p className={classes.title}>
-                <ul>
-                  <li>Marketing communications</li>
-                  <li>Facebook advertising</li>
-                  <li>Google Adwords advertising</li>
-                  <li>Customer relationship management</li>
-                </ul>
-              </p>
-            </h4>
-          </div>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
     </div>
   );
 };
 
-export default Timeline;
+export default TechStack;
