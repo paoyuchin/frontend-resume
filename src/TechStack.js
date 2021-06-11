@@ -22,8 +22,8 @@ const useStyles = makeStyles(theme => ({
   title: {
     // padding: "10px 0",
     textAlign: "left",
-    color: "#3d4451",
-    paddingTop: '15px',
+    color: "#6B7870",
+    // paddingTop: '15px',
     "@media (max-width:960px)": {
       textAlign: "left",
       // paddingLeft: "16px",
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   iconStyle: {
     width:'35px',
     height:'35px',
-    color:'rgb(0, 115, 176);'
+    color:'#B45A3D'
   },
   item: {
     "@media (max-width:960px)": {

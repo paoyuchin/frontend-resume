@@ -48,7 +48,7 @@ const Project = () => {
       <VerticalTimeline layout={"1-column"}>
         <VerticalTimelineElement
           className="lion_work"
-          iconStyle={{ background: "#6181B6" }}
+          iconStyle={{ background: "#E6A85F" }}
           icon={<GoFileDirectory  color="#fff" />}
         >
           <div className={classes.title}>
@@ -75,7 +75,7 @@ const Project = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="lion_work"
-          iconStyle={{ background: "#6181B6" }}
+          iconStyle={{ background: "#E6A85F" }}
           icon={<GoFileDirectory  color="#fff" />}
         >
           <div className={classes.title}>
@@ -108,7 +108,7 @@ const Project = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="lion_work"
-          iconStyle={{ background: "#6181B6" }}
+          iconStyle={{ background: "#E6A85F" }}
           icon={<GoFileDirectory  color="#fff" />}
         >
           <div className={classes.title}>
@@ -135,7 +135,7 @@ const Project = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="lion_work"
-          iconStyle={{ background: "#6181B6" }}
+          iconStyle={{ background: "#E6A85F" }}
           icon={<GoFileDirectory  color="#fff" />}
         >
           <div className={classes.title}>
@@ -158,7 +158,7 @@ const Project = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="lion_work"
-          iconStyle={{ background: "#6181B6" }}
+          iconStyle={{ background: "#E6A85F" }}
           icon={<GoFileDirectory  color="#fff" />}
         >
           <div className={classes.title}>

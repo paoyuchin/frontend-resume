@@ -66,7 +66,7 @@ const Timeline = () => {
       <VerticalTimelineElement
       className="lion_work"
       // date="2018/6～2019/8"
-      iconStyle={{ background: "#0073b0" }}
+      iconStyle={{ background: "#E6A85F" }}
       icon={
           <MdWork color="white"/>
       }
@@ -97,7 +97,7 @@ const Timeline = () => {
         <VerticalTimelineElement
           className="lion_work"
           // date="2018/6～2019/8"
-          iconStyle={{ background: "#0073b0" }}
+          iconStyle={{ background: "#E6A85F" }}
           icon={
               <MdWork color="white"/>
           }
@@ -199,7 +199,7 @@ const Timeline = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--hote"
           // date="2016/07～2017/08"
-          iconStyle={{ background: "#0073b0" }}
+          iconStyle={{ background: "#E6A85F" }}
           icon={
             <MdWork color="white"/>
           }
