@@ -23,7 +23,6 @@ const HotelIcon = () => {
         />
       </div>
       <span className={classes.layout}>Howard Prince Hotel Taichung</span>
-      <p>2013/11~2015/10</p>
     </div>
   );
 };
